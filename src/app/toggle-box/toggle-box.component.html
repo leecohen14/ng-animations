@@ -1,0 +1,13 @@
+<p>Status: {{isDimmed ? 'greenAndTall' : 'redAndShort'}}</p>
+Timeout:<input type="text" [(ngModel)]="timeout">
+<br>
+<div class="toggle-box" [@dimBox]="isDimmed ? 'greenAndTall' : 'redAndShort'"  (@dimBox.done)="onDone()"
+     (click)="isDimmed = !isDimmed">
+  <p>{{ isDimmed ? 'greenAndTall' : 'redAndShort' }}!</p>
+</div>
+
+
+
+
+
+<app-give-money-btn *ngIf="showBtn" [@fade]="showBtn ? 'show' : 'hide'"></app-give-money-btn>
